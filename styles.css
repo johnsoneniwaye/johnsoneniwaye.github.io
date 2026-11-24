@@ -247,3 +247,18 @@ body{background-image:radial-gradient(ellipse at 90% 0%,#aac8ffb3,transparent 37
  :is(.button,.minimal-nav>a,.filters button,.hero-actions .text-link,.footer>a,.close-video,#reset-scene,.video-dialog .text-link):is(:hover,:active,:focus-visible){transform:none}
 }
 
+ /* Optical glass material for the reel and tactile glass slider controls. */
+.reel-disc{background:linear-gradient(125deg,#ffffff9c,#c2ddff24 38%,#ffffff61 64%,#8bb6ff24);border-color:#ffffffab;box-shadow:inset 0 0 0 7px #e0efff59,inset 0 0 0 10px #9fc7ff4d,0 3px 15px #0a2c9c1a}
+.reel-disc-back{box-shadow:inset 0 0 0 8px #c0dbff42}
+.reel-depth{background:repeating-radial-gradient(circle,#c8e4ff40 0 2px,#ffffff14 2px 3px);box-shadow:0 0 0 10px #dcefff40}
+.reel-spokes{background:repeating-conic-gradient(from 12deg,transparent 0 41deg,#e8f4ff80 41deg 60deg);box-shadow:inset 3px 4px 12px #102b8a33}
+.reel-hub{background:linear-gradient(140deg,#ffffffd6,#b5d5ff45 52%,#ffffff85);box-shadow:0 6px 18px #071f7c26,inset 0 0 0 5px #e7f4ff80,inset 0 0 0 7px #ffffff47}
+.reel-rim{border-color:#ffffffd9;box-shadow:0 0 0 2px #aecfff80,inset 0 0 0 2px #ffffff66}
+.film-tail{background:#10327480;border-color:#d7e7ffb3}
+.film-tail i{background:linear-gradient(145deg,#a8ceff80,#5f8aff33)}
+.stage-controls input[type=range],.reel-control input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border:1px solid #ffffff99;border-radius:999px;background:#2455f52e;box-shadow:inset 0 1px 3px #14213a20;cursor:ew-resize}
+.reel-control input[type=range]{background:#ffffff40}
+.stage-controls input[type=range]::-webkit-slider-thumb,.reel-control input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;border:2px solid #fff;background:#3f6df5;box-shadow:0 2px 8px #14213a40}
+.reel-control input[type=range]::-webkit-slider-thumb{background:#fff;border-color:#b8d3ff}
+.stage-controls input[type=range]::-moz-range-thumb,.reel-control input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;border:2px solid #fff;background:#3f6df5;box-shadow:0 2px 8px #14213a40}
+.reel-control input[type=range]::-moz-range-thumb{background:#fff;border-color:#b8d3ff}
