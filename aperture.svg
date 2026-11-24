@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="680" viewBox="0 0 660 680" fill="none">
+<defs><radialGradient id="light"><stop stop-color="#e3e8ce"/><stop offset=".4" stop-color="#acb98e"/><stop offset=".74" stop-color="#485a38"/><stop offset="1" stop-color="#1c2319"/></radialGradient><linearGradient id="film" x1="100" y1="100" x2="560" y2="570" gradientUnits="userSpaceOnUse"><stop stop-color="#e5eccb"/><stop offset=".5" stop-color="#b8c597"/><stop offset="1" stop-color="#6b7b54"/></linearGradient><radialGradient id="dark"><stop stop-color="#11170f"/><stop offset=".75" stop-color="#202a18"/><stop offset="1" stop-color="#475539"/></radialGradient><pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 1H4" stroke="#0c1008" stroke-opacity=".13"/></pattern><filter id="glow"><feGaussianBlur stdDeviation="19"/></filter></defs>
+<path fill="#1b2218" d="M0 0h660v680H0z"/>
+<circle cx="333" cy="333" r="310" fill="url(#light)"/>
+<circle cx="330" cy="333" r="225" stroke="#dce7b8" stroke-width="12" opacity=".25" filter="url(#glow)"/>
+<g transform="translate(330 333) rotate(-24)">
+<path d="M0-222 192-111 192 111 0 222-192 111-192-111Z" fill="url(#film)"/>
+<path d="M0-222 192-111 35-42-115-90Z" fill="#ecf0d6"/>
+<path d="m192-111 0 222-139-100L35-42Z" fill="#bfcb9e"/>
+<path d="M192 111 0 222 18 54 53 11Z" fill="#91a477"/>
+<path d="M0 222-192 111-35 42 18 54Z" fill="#d4debc"/>
+<path d="m-192 111 0-222 139 100 18 53Z" fill="#a8b88b"/>
+<path d="M-192-111 0-222-18-54-53-11Z" fill="#dce5c4"/>
+<path d="M-18-54 35-42 53 11 18 54-35 42-53-11Z" fill="url(#dark)"/>
+<path d="M0-222 192-111 192 111 0 222-192 111-192-111Z" stroke="#f6f8e5" stroke-opacity=".25"/>
+</g>
+<circle cx="330" cy="333" r="267" stroke="#c9d6a9" stroke-opacity=".24"/>
+<circle cx="330" cy="333" r="275" stroke="#c9d6a9" stroke-opacity=".09"/>
+<path d="M330 47V70M330 596V619M44 333H67M593 333H616" stroke="#d2ddba" stroke-opacity=".5"/>
+<path d="M25 95V72H48M612 72H635V95M635 572V595H612M48 595H25V572" stroke="#d2ddba" stroke-opacity=".55"/>
+<path d="M0 0h660v680H0z" fill="url(#lines)"/>
+</svg>
