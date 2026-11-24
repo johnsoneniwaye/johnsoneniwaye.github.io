@@ -1,4 +1,4 @@
-# Jason’s portfolio
+# Johnson’s portfolio
 
 Public website: https://johnsoneniwaye.github.io/
 
@@ -6,14 +6,15 @@ This is the active GitHub Pages website source. The complete previous server-bac
 
 ## Update videos and page text
 
-1. Open https://johnsoneniwaye.github.io/admin.html and edit the form.
-2. Choose **Download update** to get `content.json`.
-3. Choose **Publish on GitHub**, sign in to your GitHub account, upload `content.json` at the repository root, and commit the change.
-4. Wait for GitHub Pages to publish, then refresh the public website.
+The public editor is retired. The portfolio has no management link, and `/admin.html` redirects to the homepage. Make future updates through authenticated GitHub.
 
-Only repository collaborators with write permission can publish changes. Anyone can see the static editor, but it cannot write to the repository or affect the public site without GitHub authorization. Drafts are saved only in the current browser. Hidden projects remain in local drafts and are excluded from the downloaded public content. The repository contains only published data; do not commit private client work or credentials.
+1. Upload videos to YouTube as public or unlisted, with embedding enabled.
+2. Connect a coding assistant to `johnsoneniwaye/johnsoneniwaye.github.io` and tell it to read `AGENTS.md`.
+3. Provide the video links and titles. Ask it to update `content.json` while preserving the current projects and design.
+4. Review and commit the changes to `main`. If the assistant cannot write to GitHub, upload its changed files to this repository yourself.
+5. Wait for GitHub Pages to publish, then refresh the portfolio.
 
-The old ChatGPT admin edits only the old website. Use this GitHub editor for this website.
+Only people with repository write permission can publish changes. Do not commit private client work or credentials.
 
 ## Future edits with Claude, ChatGPT or another coding assistant
 
@@ -21,7 +22,7 @@ Connect your GitHub account and select `johnsoneniwaye/johnsoneniwaye.github.io`
 
 Example request:
 
-> Read this repository and AGENTS.md. Update [describe the change], preserve the existing design, video player and content editor, and show me the changes before publishing.
+> Read this repository and AGENTS.md. Update [describe the change], preserve the existing design, video player and GitHub publishing workflow, and show me the changes before publishing.
 
 ## Structure
 
@@ -30,6 +31,7 @@ Example request:
 - `app.js`: gallery, video playback, content loading and interactions.
 - `styles.css`: responsive design and reduced-motion support.
 - Local fonts and fallback artwork are stored at the repository root.
-- `admin.html`, `editor.js`, `editor.css`: local content editor with GitHub publishing instructions.
+- `admin.html`: redirects the retired editor URL to the portfolio. `editor.js` and `editor.css` are legacy assets, not loaded by any active page.
 
 No build step is required. Serve the root with any static server to preview. Relative site location is the root GitHub user site. Pages publishes `main` from `/ (root)`. `.nojekyll` disables Jekyll processing. No secrets or credentials belong in this repository.
+
