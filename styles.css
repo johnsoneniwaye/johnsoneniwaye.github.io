@@ -150,3 +150,100 @@ body{
  .contact-studio .contact-actions .button,.reel-control{background:#4a72f3;backdrop-filter:none;-webkit-backdrop-filter:none}
 }
 
+
+/* Site-wide glass surfaces and clearly visible, pointer-responsive controls. */
+:root{--glass-edge:#ffffffd9;--glass-shadow:inset 0 1px 0 #ffffffe6,0 12px 38px #24447b12;--muted:#53647d}
+body{background-image:radial-gradient(ellipse at 90% 0%,#aac8ffb3,transparent 37%),radial-gradient(ellipse at 2% 32%,#b7dcff99,transparent 37%),radial-gradient(ellipse at 96% 64%,#c2d2ff99,transparent 35%)}
+.hero{gap:24px}
+.hero-copy,.hero-foot,.focus-strip,.project-card,.filters,.footer,.work-empty{
+ background:linear-gradient(135deg,#ffffff91,#ffffff38);border:1px solid var(--glass-edge);
+ box-shadow:var(--glass-shadow);-webkit-backdrop-filter:blur(18px) saturate(135%);backdrop-filter:blur(18px) saturate(135%);
+}
+.hero-copy{border-radius:28px;padding:32px;min-width:0}
+.hero h1{font-size:clamp(54px,5.9vw,84px)}
+.hero-foot{border-radius:16px;padding:18px 22px;margin-top:8px}
+.hero-intro{color:#465872}
+.hero-note{color:#53647d}
+.focus-strip{border-inline:0}
+.project-card{padding:10px;border-radius:24px}
+.project-card .project-play{border-radius:16px}
+.project-info{padding:8px 8px 12px}
+.project-info>span{background:#ffffff8f;color:#435775;border-radius:999px;padding:5px 12px;align-self:flex-start}
+.project-card:hover{border-color:#fff;box-shadow:inset 0 1px 0 #fff,0 18px 42px #2455f522}
+.filters{width:fit-content;max-width:100%;border-radius:18px;gap:8px;padding:7px;margin-bottom:28px;flex-wrap:wrap}
+.filters button{border:1px solid transparent;border-radius:12px;padding:9px 18px;min-height:44px;color:#435775}
+.filters button[aria-pressed=true]{background:#2455f51c;color:#153bab;border:1px solid #2455f538}
+.filters button[aria-pressed=true]:after{display:none}
+.footer{border-radius:22px;padding:24px;margin-block:24px;color:#53647d;min-height:100px}
+.work-empty{border-radius:24px}
+.header .minimal-nav{padding:7px;gap:7px;perspective:700px;border-color:#fff;background:linear-gradient(135deg,#ffffffab,#ffffff57)}
+.header .minimal-nav>a{border:1px solid transparent;color:#435775;min-width:84px;min-height:44px}
+.header .minimal-nav>a[aria-current=location]{background:#2455f51c;color:#153bab;border-color:#2455f530;box-shadow:inset 0 1px 0 #ffffffb3}
+:is(.button,.minimal-nav>a,.filters button,.hero-actions .text-link,.footer>a,.close-video,#reset-scene,.video-dialog .text-link){
+ --ui-rx:-5deg;--ui-ry:5deg;
+ transform:perspective(650px) translateY(0) rotateX(0) rotateY(0);
+ transition:transform .24s var(--ease),background .2s,color .2s,border-color .2s,box-shadow .24s;
+}
+.hero-actions .text-link,.footer>a,.video-dialog .text-link{
+ display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 16px;
+ border:1px solid #ffffffd9;border-radius:12px;background:#ffffff6b;color:#243e68;font-weight:400;
+ box-shadow:inset 0 1px 0 #ffffffc9;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+:is(.minimal-nav>a,.filters button,.hero-actions .text-link,.footer>a,.video-dialog .text-link):focus-visible{
+ background:#2455f5;color:#fff;border-color:#fff;box-shadow:inset 0 1px 0 #ffffff80,0 8px 24px #2455f54d;
+}
+:is(.button,.close-video,#reset-scene):focus-visible{box-shadow:inset 0 1px 0 #ffffff80,0 0 0 4px #2455f526}
+.contact-studio .contact-actions .button:focus-visible{background:#ffffff40;box-shadow:0 0 0 4px #ffffff26}
+.contact-studio>.wrap{background:linear-gradient(135deg,#ffffff30,#ffffff0f)}
+.reel-control{background:#ffffff21}
+.stage-controls{background:#ffffffa6}
+@media(hover:hover) and (pointer:fine){
+ :is(.button,.minimal-nav>a,.filters button,.hero-actions .text-link,.footer>a,.close-video,#reset-scene,.video-dialog .text-link):hover{
+  transform:perspective(650px) translateY(-5px) rotateX(var(--ui-rx)) rotateY(var(--ui-ry)) scale(1.025);
+  border-color:#fff;box-shadow:inset 0 1px 0 #ffffffa6,0 12px 24px #163fa747;
+ }
+ .header .minimal-nav>a:hover,.filters button:hover,.hero-actions .text-link:hover,.footer>a:hover,.video-dialog .text-link:hover{
+  background:linear-gradient(135deg,#3167f7eb,#1948d9eb);color:#fff;border-color:#ffffffba;
+ }
+ .hero-actions .button:hover{background:linear-gradient(135deg,#477aff,#1643cf)}
+ .work-more .button:hover{background:#2455f5;color:#fff}
+ .contact-studio .contact-actions .button:hover{background:linear-gradient(135deg,#ffffff57,#ffffff2b);color:#fff;box-shadow:inset 0 1px 0 #ffffffb3,0 14px 30px #071f7c66}
+ .close-video:hover,#reset-scene:hover{background:#2455f5;color:#fff}
+}
+:is(.button,.minimal-nav>a,.filters button,.hero-actions .text-link,.footer>a,.close-video,#reset-scene,.video-dialog .text-link):active{
+ transform:perspective(650px) translateY(1px) scale(.97);
+ box-shadow:inset 0 2px 7px #14213a22;
+}
+@media(max-width:1050px){
+ .hero-copy{padding:24px}
+ .hero h1{font-size:clamp(48px,5.8vw,66px)}
+ .hero-actions{gap:12px;flex-wrap:wrap}
+}
+@media(max-width:760px){
+ .hero-copy{padding:26px 22px;border-radius:24px}
+ .hero h1{font-size:clamp(42px,10vw,72px)}
+ .hero-intro{font-size:15px}
+ .hero-note{font-size:10px;gap:8px}
+ .hero-foot{padding:16px;font-size:10px}
+ .header .minimal-nav{gap:4px;padding:5px}
+ .header .minimal-nav>a{padding:8px 14px;min-width:72px}
+ .project-grid{gap:20px 12px}
+ .project-card{padding:6px;border-radius:18px}
+ .project-card .project-play{border-radius:12px}
+ .project-info{padding:8px 5px 10px}
+ .project-info>span{font-size:10px;padding:4px 8px}
+ .filters{gap:3px;padding:5px;border-radius:16px}
+ .filters button{font-size:12px;padding:8px 11px}
+ .footer{padding:20px;gap:12px;font-size:12px}
+ .footer>a{padding:8px 12px}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .hero-copy,.hero-foot,.project-card,.filters,.footer,.work-empty{background:#edf3fd}
+}
+@media(prefers-reduced-transparency:reduce){
+ .hero-copy,.hero-foot,.focus-strip,.project-card,.filters,.footer,.work-empty{background:#edf3fd;backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+ :is(.button,.minimal-nav>a,.filters button,.hero-actions .text-link,.footer>a,.close-video,#reset-scene,.video-dialog .text-link):is(:hover,:active,:focus-visible){transform:none}
+}
+
