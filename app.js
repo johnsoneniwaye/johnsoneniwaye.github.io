@@ -25,7 +25,7 @@
   document.title=s.name+' — Video Editor';
   const credit=document.querySelector('.footer p');if(credit)credit.textContent='© '+new Date().getFullYear()+' '+s.name+'. Every frame with purpose.';
   const email='mailto:'+s.email,phone=String(s.phone).replace(/\D/g,'');
-  document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{a.href=email;if(a.closest('.contact-actions'))a.textContent='Email '+s.name;else if(a.closest('.contact-details'))a.textContent=s.email;});
+  document.querySelectorAll('a[href^="mailto:"]').forEach(a=>{a.href=email;if(a.hasAttribute('data-email-icon')){a.setAttribute('aria-label','Email '+s.name);a.title='Email '+s.name;}else if(a.closest('.contact-actions'))a.textContent='Email '+s.name;});
   document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a=>{a.href='https://wa.me/'+phone+'?text='+encodeURIComponent('Hi '+s.name+', I’d like to discuss a video project.');});
   document.querySelectorAll('a[href^="tel:"]').forEach(a=>{a.href='tel:'+String(s.phone).replace(/[\s()-]/g,'');a.textContent=s.phone;});
  }
@@ -59,3 +59,4 @@
  const featured=projects[0],play=document.getElementById('stage-play');play.disabled=false;play.setAttribute('aria-label','Play '+featured.title);thumbnail(document.getElementById('stage-image'),featured);document.getElementById('stage-image').alt=featured.title;play.addEventListener('click',()=>openProject(featured,play));document.querySelector('.panel-foot>span').textContent=featured.title;const sides=document.querySelectorAll('.film-back img,.film-mid img');sides.forEach((img,i)=>thumbnail(img,projects[i+1]||featured));
  }).catch(()=>{empty.hidden=false;grid.hidden=true;filters.hidden=true;count.textContent='';});
 })();
+
