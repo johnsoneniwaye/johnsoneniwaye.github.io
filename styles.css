@@ -27,3 +27,6 @@
 @media(max-width:760px){.header{height:88px;gap:10px}.header .wordmark{font-size:20px;gap:7px}.header .brand-icon{width:30px;height:30px;font-size:28px}.header .minimal-nav{gap:1px;padding:3px}.header .minimal-nav>a{display:flex;min-height:40px;padding:8px 12px;font-size:13px}.filters{gap:20px}.filters button{font-size:13px}.project-card.awaiting-reveal,.project-card:nth-child(even).awaiting-reveal{transform:translate3d(0,30px,0)}.project-card{transition-delay:0ms}}
 @media(max-width:380px){.header .minimal-nav>a{padding-inline:9px}.header .wordmark{font-size:18px}.header .brand-icon{width:27px;height:27px;font-size:25px}}
 @media(prefers-reduced-motion:reduce){.project-card,.project-card.awaiting-reveal,.project-card:nth-child(even).awaiting-reveal{opacity:1;transform:none;transition:none}.project-card .project-play,.project-card.awaiting-reveal .project-play{clip-path:none}}
+
+/* Centre the three navigation links without a brand mark. */
+.header{justify-content:center}.header .minimal-nav{margin-inline:auto}.contact-studio .contact-details{justify-content:flex-start}.contact-studio .contact-details:empty{display:none}
