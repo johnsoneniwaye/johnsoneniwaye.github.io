@@ -1,12 +1,12 @@
 # Jason’s portfolio
 
-Public website: https://clarion128838.github.io/
+Public website: https://johnsoneniwaye.github.io/
 
-This is the active GitHub Pages website source. The complete previous server-backed app remains in the private `clarion128838/jason-portfolio` repository. This static version uses no ChatGPT services, database, account, or subscription. Videos are embedded from YouTube.
+This is the active GitHub Pages website source. The complete previous server-backed app remains in the private `johnsoneniwaye/jason-portfolio` repository. This static version uses no ChatGPT services, database, account, or subscription. Videos are embedded from YouTube.
 
 ## Update videos and page text
 
-1. Open https://clarion128838.github.io/admin.html and edit the form.
+1. Open https://johnsoneniwaye.github.io/admin.html and edit the form.
 2. Choose **Download update** to get `content.json`.
 3. Choose **Publish on GitHub**, sign in to your GitHub account, upload `content.json` at the repository root, and commit the change.
 4. Wait for GitHub Pages to publish, then refresh the public website.
@@ -17,7 +17,7 @@ The old ChatGPT admin edits only the old website. Use this GitHub editor for thi
 
 ## Future edits with Claude, ChatGPT or another coding assistant
 
-Connect your GitHub account and select `clarion128838/clarion128838.github.io`, or clone/download this repository. Tell the assistant to read `AGENTS.md` and preserve the YouTube editing workflow. Review its changes and commit them here. GitHub Pages republishes the site. A repository integration in another assistant may be read-only; use its coding tool or upload the changed files to GitHub in that case.
+Connect your GitHub account and select `johnsoneniwaye/johnsoneniwaye.github.io`, or clone/download this repository. Tell the assistant to read `AGENTS.md` and preserve the YouTube editing workflow. Review its changes and commit them here. GitHub Pages republishes the site. A repository integration in another assistant may be read-only; use its coding tool or upload the changed files to GitHub in that case.
 
 Example request:
 
