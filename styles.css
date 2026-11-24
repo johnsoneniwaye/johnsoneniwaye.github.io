@@ -262,3 +262,21 @@ body{background-image:radial-gradient(ellipse at 90% 0%,#aac8ffb3,transparent 37
 .reel-control input[type=range]::-webkit-slider-thumb{background:#fff;border-color:#b8d3ff}
 .stage-controls input[type=range]::-moz-range-thumb,.reel-control input[type=range]::-moz-range-thumb{width:15px;height:15px;border-radius:50%;border:2px solid #fff;background:#3f6df5;box-shadow:0 2px 8px #14213a40}
 .reel-control input[type=range]::-moz-range-thumb{background:#fff;border-color:#b8d3ff}
+
+/* WhatsApp keeps its green identity within the glass interface. */
+.contact-studio .contact-actions a[href^="https://wa.me/"]{
+ background:linear-gradient(135deg,#52eb96ed,#25d366dc);
+ color:#07351e;border-color:#b7ffd5d9;
+ box-shadow:inset 0 1px 0 #e6fff1b3,0 8px 22px #062b4930;
+}
+.contact-studio .contact-actions a[href^="https://wa.me/"]:focus-visible{
+ background:#43e38a;color:#07351e;outline-color:#fff;
+ box-shadow:inset 0 1px 0 #effff7,0 0 0 4px #93ffc34d;
+}
+@media(hover:hover) and (pointer:fine){
+ .contact-studio .contact-actions a[href^="https://wa.me/"]:hover{
+  background:linear-gradient(135deg,#75ffb0,#2fdf7d);color:#07351e;
+  border-color:#e2ffef;box-shadow:inset 0 1px 0 #f0fff7,0 14px 30px #062b4959;
+ }
+}
+
