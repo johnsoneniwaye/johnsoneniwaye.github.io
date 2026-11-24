@@ -16,6 +16,26 @@
  function updateNav(){let active=navSections[0];for(const section of navSections){if(section.getBoundingClientRect().top<=innerHeight*.45)active=section;}for(const a of navLinks){if(a.getAttribute('href')==='#'+active?.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');}}
  if('IntersectionObserver' in window){const navObserver=new IntersectionObserver(updateNav,{rootMargin:'-10% 0px -55% 0px'});navSections.forEach(section=>navObserver.observe(section));}updateNav();
 
+
+ // Delegate tilt to include filters and other controls created after content loads.
+ const glassControlSelector='.button,.minimal-nav>a,.filters button,.hero-actions .text-link,.footer>a,.close-video,#reset-scene,.video-dialog .text-link';
+ const clearGlassTilt=el=>{el?.style.removeProperty('--ui-rx');el?.style.removeProperty('--ui-ry');};
+ document.addEventListener('pointermove',event=>{
+  if(!fine.matches||reduced.matches)return;
+  const control=event.target.closest(glassControlSelector);if(!control)return;
+  const box=control.getBoundingClientRect();
+  if(!box.width||!box.height)return;
+  const x=Math.max(0,Math.min(1,(event.clientX-box.left)/box.width));
+  const y=Math.max(0,Math.min(1,(event.clientY-box.top)/box.height));
+  control.style.setProperty('--ui-rx',(0.5-y)*12+'deg');
+  control.style.setProperty('--ui-ry',(x-0.5)*14+'deg');
+ });
+ document.addEventListener('pointerout',event=>{
+  const control=event.target.closest(glassControlSelector);
+  if(control&&(!event.relatedTarget||!control.contains(event.relatedTarget)))clearGlassTilt(control);
+ });
+ reduced.addEventListener('change',()=>{if(reduced.matches)document.querySelectorAll(glassControlSelector).forEach(clearGlassTilt);});
+
  function applySettings(s){
   if(!s)return;
   const headline=document.getElementById('hero-title'),contact=document.getElementById('contact-title');
@@ -59,4 +79,5 @@
  const featured=projects[0],play=document.getElementById('stage-play');play.disabled=false;play.setAttribute('aria-label','Play '+featured.title);thumbnail(document.getElementById('stage-image'),featured);document.getElementById('stage-image').alt=featured.title;play.addEventListener('click',()=>openProject(featured,play));document.querySelector('.panel-foot>span').textContent=featured.title;const sides=document.querySelectorAll('.film-back img,.film-mid img');sides.forEach((img,i)=>thumbnail(img,projects[i+1]||featured));
  }).catch(()=>{empty.hidden=false;grid.hidden=true;filters.hidden=true;count.textContent='';});
 })();
+
 
