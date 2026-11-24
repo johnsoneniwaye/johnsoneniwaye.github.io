@@ -30,3 +30,123 @@
 
 /* Centre the three navigation links without a brand mark. */
 .header{justify-content:center}.header .minimal-nav{margin-inline:auto}.contact-studio .contact-details{justify-content:flex-start}.contact-studio .contact-details:empty{display:none}
+
+/* Frosted glass finish. Keep media sharp; use blur only on interface surfaces. */
+body{
+ background-color:#f4f7fc;
+ background-image:radial-gradient(ellipse at 86% 7%,#b8d0ff80 0,transparent 34%),radial-gradient(ellipse at 8% 26%,#d6e8ff90 0,transparent 30%);
+}
+.header .minimal-nav{
+ background:linear-gradient(135deg,#ffffffb8,#ffffff70);
+ border:1px solid #ffffffed;
+ box-shadow:inset 0 1px 0 #fff,0 8px 30px #284e8b0d,0 1px 3px #284e8b0d;
+ -webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);
+}
+.header .minimal-nav>a{color:#52627a}
+.header .minimal-nav>a:hover,.header .minimal-nav>a[aria-current=location]{
+ background:#ffffffb8;color:#14213a;box-shadow:inset 0 1px 0 #fff,0 2px 8px #284e8b0a;
+}
+.edit-stage{
+ background:linear-gradient(145deg,#ffffff52,#d9e7ff38);
+ border:1px solid #ffffffc9;box-shadow:inset 0 1px 0 #fff,0 20px 70px #2455f509;
+}
+.film-panel{
+ background:linear-gradient(130deg,#ffffffd4,#ffffff85);
+ border-color:#fffffff0;box-shadow:inset 0 1px 0 #fff,0 20px 42px #27457426,0 2px 5px #ffffffb0;
+ -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.stage-controls{
+ left:16px;right:16px;bottom:12px;padding:10px 12px;
+ background:#ffffffb3;border:1px solid #ffffffe6;border-radius:14px;
+ box-shadow:0 4px 16px #2745740a;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+}
+.hero-actions .button{
+ background:linear-gradient(135deg,#2455f5f5,#3e6bf1df);
+ border:1px solid #ffffff85;box-shadow:inset 0 1px 0 #ffffff5c,0 6px 16px #2455f51c;
+}
+.hero-actions .button:hover{background:#1949e5;box-shadow:inset 0 1px 0 #ffffff70,0 8px 20px #2455f52b}
+.focus-strip{
+ background:#ffffff47;border-block:1px solid #ffffffc4;
+ box-shadow:inset 0 1px 0 #fff;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+.project-play{border:1px solid #ffffffdc;box-shadow:0 6px 24px #2745740c;border-radius:14px}
+.play-icon,.stage-play-icon{
+ background:#ffffffbf;color:#14213a;border:1px solid #ffffffe6;
+ box-shadow:inset 0 1px 0 #fff,0 4px 16px #14213a15;
+ -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+.project-info>span{
+ background:#ffffff8a;border:1px solid #ffffffde;box-shadow:0 2px 8px #27457405;
+}
+.work-more .button{
+ background:#ffffff85;border:1px solid #ffffffed;border-radius:12px;
+ box-shadow:inset 0 1px 0 #fff,0 5px 18px #2745740a;
+ -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+}
+.work-more .button:hover{background:#ffffffe0}
+.contact-studio{
+ padding:36px 0;background:#2455f5;
+ background-image:radial-gradient(ellipse at 92% 10%,#a6c9ff7a 0,transparent 48%),radial-gradient(ellipse at 7% 95%,#1034b9 0,transparent 50%);
+}
+.contact-studio:before{
+ inset:-20%;opacity:.5;transform:rotate(-24deg);
+ background:linear-gradient(90deg,transparent 20%,#c6ddff40 42%,transparent 58%);
+}
+.contact-studio>.wrap{
+ padding:28px 32px 20px;border-radius:28px;
+ background:linear-gradient(135deg,#ffffff21,#ffffff0a);
+ border:1px solid #ffffff52;box-shadow:inset 0 1px 0 #ffffff52,0 20px 70px #071f7c26;
+ -webkit-backdrop-filter:blur(22px) saturate(120%);backdrop-filter:blur(22px) saturate(120%);
+}
+.contact-studio .contact-top{color:#fff;border-color:#ffffff35;font-size:13px}
+.contact-studio h2{font-size:clamp(54px,6vw,86px)}
+.contact-studio .contact-layout{padding-block:32px;min-height:450px}
+.contact-studio .contact-intro{color:#f0f5ff}
+.contact-studio .contact-actions .button{
+ background:linear-gradient(135deg,#ffffff2b,#ffffff12);color:#fff;
+ border:1px solid #ffffff70;border-radius:14px;
+ box-shadow:inset 0 1px 0 #ffffff40,0 5px 18px #071f7c1a;
+ -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+}
+.contact-studio .contact-actions .button:hover{background:#ffffff35;border-color:#ffffffb8}
+.contact-studio .contact-actions a:focus-visible{outline-color:#fff}
+.reel-control{
+ width:300px;padding:7px 14px;border:1px solid #ffffff50;border-radius:999px;
+ background:#ffffff14;box-shadow:inset 0 1px 0 #ffffff29;
+ -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+.video-dialog{
+ background:#f4f7fcf0;border-color:#ffffffe6;border-radius:22px;
+ box-shadow:inset 0 1px 0 #fff,0 25px 100px #05102e55;
+ -webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);
+}
+.close-video{background:#ffffffa6;border-color:#ffffffe6}
+@media(max-width:1050px){
+ .stage-controls{left:8px;right:8px;padding:8px}
+ .contact-studio>.wrap{padding:24px}
+ .contact-studio h2{font-size:clamp(48px,6vw,65px)}
+}
+@media(max-width:760px){
+ .header .minimal-nav{background:#ffffffb8}
+ .stage-controls{left:4px;right:4px;bottom:4px;gap:8px;font-size:10px;padding:7px 9px}
+ .stage-controls input{min-width:0}
+ .contact-studio{padding:24px 0}
+ .contact-studio>.wrap{width:92%;padding:22px 20px 16px;border-radius:22px}
+ .contact-studio .contact-top{font-size:11px;gap:12px}
+ .contact-studio .contact-layout{padding-top:28px;padding-bottom:10px}
+ .contact-studio h2{font-size:clamp(44px,10vw,70px)}
+ .contact-studio .contact-intro{font-size:16px}
+ .contact-studio .contact-actions .button{font-size:13px}
+ .reel-control{width:min(280px,100%);font-size:12px}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .header .minimal-nav,.stage-controls,.work-more .button{background:#f9fbff}
+ .contact-studio>.wrap{background:#315ff0}
+ .contact-studio .contact-actions .button,.reel-control{background:#4a72f3}
+}
+@media(prefers-reduced-transparency:reduce){
+ .header .minimal-nav,.stage-controls,.work-more .button,.film-panel{background:#f9fbff;backdrop-filter:none;-webkit-backdrop-filter:none}
+ .contact-studio>.wrap{background:#315ff0;backdrop-filter:none;-webkit-backdrop-filter:none}
+ .contact-studio .contact-actions .button,.reel-control{background:#4a72f3;backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+
